@@ -43,6 +43,18 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.content {
+  width: 1110px;
+  margin: 0 auto;
+}
+
 /* lora-regular - latin */
 @font-face {
   font-family: 'Lora';

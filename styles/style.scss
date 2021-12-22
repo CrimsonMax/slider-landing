@@ -1,14 +1,49 @@
-@import url(null.css);
+@import url(base.css);
 @import url(colors.css);
 @import url(icon-style.css);
 
-body {
+html {
+  height: 100%;
 
-  h1 {
-    font-family: "Lora", sans-serif;
-    font-style: normal;
-    font-weight: 400;
+  body {
+    height: 100%;
+
+    .header {
+    }
+
+    .main {
+      flex: 1 1 auto;
+    }
+
+    .footer {
+      height: 408px;
+
+      &__container {
+      }
+
+      &__block {
+      }
+
+      &__block--header {
+
+        &_header {
+        }
+      }
+
+      &__block--content {
+
+        &_text {
+        }
+
+        &_media {
+        }
+
+        &_media-href {
+        }
+
+        &_href {
+        }
+      }
+    }
   }
-
-  background-color: violet;
 }
