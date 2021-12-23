@@ -17,31 +17,25 @@ html {
 
     .footer {
       height: 408px;
-
+    
       &__container {
       }
 
       &__block {
-      }
 
-      &__block--header {
+        &___header{
 
-        &_header {
-        }
-      }
-
-      &__block--content {
-
-        &_text {
+          &____text{}
         }
 
-        &_media {
-        }
+        &___content{
 
-        &_media-href {
-        }
+          &____media{
 
-        &_href {
+            &_____icon{}
+          }
+
+          &____href{}
         }
       }
     }
