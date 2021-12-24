@@ -2,6 +2,10 @@
 @import url(colors.css);
 @import url(icon-style.css);
 
+@function size($pixel) {
+  @return ($pixel / 16) + rem;
+}
+
 html {
   height: 100%;
 
@@ -16,26 +20,109 @@ html {
     }
 
     .footer {
-      height: 408px;
-    
+      height: size(408);
+      background-color: var(--primary-color-up);
+
       &__container {
+        height: size(250);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: size(56);
+        margin-bottom: size(102);
+        gap: size(125);
+      }
+
+      &__about {
+        height: size(235);
+        width: size(255);
+        color: var(--main-white);
+
+        &___header {
+          margin-bottom: size(16);
+          font-size: 52px;
+          line-height: 67px;
+        }
+
+        &___content {
+          &____text {
+            margin-bottom: size(24);
+            line-height: 26px;
+            color: var(--text-gray-4);
+            opacity: 85%;
+          }
+
+          &____media {
+            display: flex;
+            align-items: center;
+
+            &_____icon {
+              height: size(24);
+              width: size(24);
+              margin-right: size(16);
+              transition: all .3s ease;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              span {
+                font-size: size(20);
+              }
+
+              &:hover {
+                color: var(--secondary-color);
+              }
+            }
+          }
+        }
+      }
+
+      &__href {
+        height: size(220);
+        width: size(730);
+        display: flex;
+        justify-content: space-between;
+        gap: size(68);
       }
 
       &__block {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        color: var(--main-white);
 
-        &___header{
-
-          &____text{}
+        &:last-of-type {
+          width: size(212);
         }
 
-        &___content{
+        &___header {
+          margin-bottom: size(24);
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 30px;
+          opacity: 50%;
 
-          &____media{
-
-            &_____icon{}
+          &____text {
           }
+        }
 
-          &____href{}
+        &___content {
+          display: flex;
+          flex-direction: column;
+
+          &____href {
+            margin-bottom: size(9);
+            line-height: 26px;
+            transition: all .3s ease;
+
+              &:hover {
+                color: var(--secondary-color);
+              }
+
+              &::first-letter {
+                font-weight: bolder;
+              }
+          }
         }
       }
     }
