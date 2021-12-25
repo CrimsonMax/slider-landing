@@ -12,6 +12,25 @@ html {
   body {
     height: 100%;
 
+    .guide {
+      display: flex;
+      align-items: center;
+
+      &__header {
+        font-size: size(20);
+        font-weight: 500;
+        line-height: size(30);
+        color: var(--text-black);
+      }
+
+      &__line {
+        width: size(73);
+        height: size(2);
+        background-color: var(--text-black);
+        margin-left: size(15);
+      }
+    }
+
     .header {
       height: size(43);
       margin-top: size(61);
@@ -80,6 +99,89 @@ html {
 
     .main {
       flex: 1 1 auto;
+
+      section {
+        margin: size(112) 0;
+      }
+
+      .reasons {
+        &__container {
+          height: size(421);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &__icons {
+          height: size(353);
+          width: size(499);
+          margin-right: size(71);
+          display: flex;
+          flex-direction: column;
+          gap: size(64);
+          flex-wrap: wrap;
+
+          &___block {
+            height: size(75);
+            display: flex;
+
+            &____pic {
+              height: size(32);
+              width: size(32);
+              margin-right: size(24);
+              position: relative;
+              top: 5%;
+            }
+
+            &____info {
+              &_____header {
+                font-family: "Lora", sans-serif;
+                font-size: size(32);
+                line-height: size(41);
+                color: var(--primary-color);
+              }
+
+              &_____text {
+                line-height: size(26);
+                color: var(--text-gray-2);
+              }
+            }
+          }
+        }
+
+        &__text {
+          height: 100%;
+          background-color: var(--primary-color);
+          width: size(540);
+          color: var(--main-white);
+          padding: size(54);
+
+          &___header {
+            font-family: "Lora", sans-serif;
+            font-size: size(40);
+            font-weight: 700;
+            line-height: size(51);
+            margin: size(8) 0 size(24);
+          }
+
+          &___main {
+            font-family: "Lato", sans-serif;
+            font-size: size(20);
+            font-weight: 500;
+            line-height: size(30);
+          }
+
+          .guide {
+            &__header {
+              color: var(--main-white);
+            }
+
+            &__line {
+              background-color: var(--main-white);
+            }
+          }
+        }
+      }
     }
 
     .footer {
