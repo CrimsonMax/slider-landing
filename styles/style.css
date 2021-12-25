@@ -9,6 +9,78 @@ html body {
   height: 100%;
 }
 
+html body .header {
+  height: 2.6875rem;
+  margin-top: 3.8125rem;
+}
+
+html body .header__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .header__logo___href {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--primary-color);
+}
+
+html body .header__nav {
+  width: 35.125rem;
+  height: 1.75rem;
+  margin-right: 5.0625rem;
+  margin-left: 11.5rem;
+}
+
+html body .header__nav___list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2.5rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  color: var(--text-black);
+}
+
+html body .header__authorization {
+  width: 12.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html body .header__authorization button {
+  font-weight: 700;
+  line-height: 1.1875rem;
+  height: 2.6875rem;
+  padding: 0.75rem 1.5rem;
+}
+
+html body .header__authorization___login {
+  width: 5.75rem;
+  color: var(--secondary-color);
+  background-color: transparent;
+}
+
+html body .header__authorization___signin {
+  width: 6.4375rem;
+  color: var(--main-white);
+  background-color: var(--secondary-color);
+  -webkit-box-shadow: 0 0.25rem 1rem 0 var(--btn-shadow);
+          box-shadow: 0 0.25rem 1rem 0 var(--btn-shadow);
+}
+
 html body .main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -44,13 +116,13 @@ html body .footer__about {
 
 html body .footer__about___header {
   margin-bottom: 1rem;
-  font-size: 52px;
-  line-height: 67px;
+  font-size: 3.25rem;
+  line-height: 4.1875rem;
 }
 
 html body .footer__about___content____text {
   margin-bottom: 1.5rem;
-  line-height: 26px;
+  line-height: 1.625rem;
   color: var(--text-gray-4);
   opacity: 85%;
 }
@@ -68,8 +140,6 @@ html body .footer__about___content____media_____icon {
   height: 1.5rem;
   width: 1.5rem;
   margin-right: 1rem;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,10 +153,6 @@ html body .footer__about___content____media_____icon {
 
 html body .footer__about___content____media_____icon span {
   font-size: 1.25rem;
-}
-
-html body .footer__about___content____media_____icon:hover {
-  color: var(--secondary-color);
 }
 
 html body .footer__href {
@@ -119,9 +185,9 @@ html body .footer__block:last-of-type {
 
 html body .footer__block___header {
   margin-bottom: 1.5rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
-  line-height: 30px;
+  line-height: 1.875rem;
   opacity: 50%;
 }
 
@@ -137,13 +203,7 @@ html body .footer__block___content {
 
 html body .footer__block___content____href {
   margin-bottom: 0.5625rem;
-  line-height: 26px;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-html body .footer__block___content____href:hover {
-  color: var(--secondary-color);
+  line-height: 1.625rem;
 }
 
 html body .footer__block___content____href::first-letter {

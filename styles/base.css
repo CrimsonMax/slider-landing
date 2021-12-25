@@ -56,6 +56,14 @@ body {
   margin: 0 auto;
 }
 
+.hover {
+  transition: all 0.3s ease;
+}
+
+.hover:hover {
+  color: var(--secondary-color);
+}
+
 /* lora-regular - latin */
 @font-face {
   font-family: 'Lora';
