@@ -58,6 +58,29 @@ html {
       margin: size(112) 0;
     }
 
+    .avatar {
+      height: size(56);
+      width: size(56);
+      border-radius: 100%;
+      overflow: hidden;
+      &__image {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .more-btn {
+      color: var(--secondary-color);
+      position: relative;
+      height: size(32);
+
+      .icon-chevron {
+        font-size: 32px;
+        position: relative;
+        top: 25%;
+      }
+    }
+
     /*=====MAIN STYLES====================================================================*/
 
     /* HEADER */
@@ -234,6 +257,134 @@ html {
           justify-content: center;
 
           &___pic {
+          }
+        }
+      }
+
+      /* SECTION NEWS */
+      .news {
+        height: size(933);
+        background-color: var(--text-gray-4);
+        padding: size(60) 0 size(96);
+
+        &__container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: size(56);
+        }
+
+        &__head {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+
+          &___title {
+          }
+
+          &___href {
+          }
+        }
+
+        &__body {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-gap: size(30);
+
+          &___prime:hover,
+          &___minor:hover {
+            transition: 0.3s;
+            box-shadow: 0 size(6) size(24) 0 var(--secondary-color);
+            cursor: default;
+          }
+
+          &___prime,
+          &___minor {
+            box-shadow: 0 size(6) size(24) 0 #00000026;
+          }
+
+          &___prime {
+            height: size(320);
+            grid-column-start: 1;
+            grid-column-end: 3;
+            display: flex;
+
+            &____image {
+              &_____img {
+                width: size(350);
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+
+            &____content {
+              width: size(380);
+              padding: size(32) size(33) size(33) size(32);
+
+              &_____header {
+                font-family: "Lora", sans-serif;
+                font-size: size(32);
+                font-weight: 700;
+                line-height: size(41);
+                color: var(--text-black);
+              }
+
+              &_____text {
+                margin: size(24) 0 size(16);
+                color: var(--text-gray-2);
+              }
+
+              &_____author {
+                display: flex;
+
+                &______photo {
+                }
+
+                &______id {
+                  margin-left: size(23);
+
+                  &_______name {
+                    color: var(--primary-color);
+                  }
+
+                  &_______position {
+                    color: var(--text-gray-2);
+                  }
+                }
+              }
+            }
+          }
+
+          &___minor {
+            height: size(320);
+            width: size(350);
+
+            &____img {
+              &_____image {
+                width: 100%;
+                height: size(204);
+                object-fit: cover;
+              }
+            }
+
+            &____text {
+              padding: size(14) size(16) size(16);
+
+              &_____header {
+                font-family: 'Lora', sans-serif;
+                font-size: size(22);
+                line-height: size(28);
+                color: var(--text-black);
+                margin-bottom: size(4);
+              }
+
+              &_____author {
+                color: var(--text-gray-2);
+              }
+            }
           }
         }
       }
