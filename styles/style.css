@@ -7,6 +7,11 @@ html {
 
 html body {
   height: 100%;
+  /*=====SUPPORT STYLES==================================================================*/
+  /*=====MAIN STYLES====================================================================*/
+  /* HEADER */
+  /* MAIN */
+  /* FOOTER */
 }
 
 html body .guide {
@@ -19,9 +24,6 @@ html body .guide {
 }
 
 html body .guide__header {
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.875rem;
   color: var(--text-black);
 }
 
@@ -30,6 +32,34 @@ html body .guide__line {
   height: 0.125rem;
   background-color: var(--text-black);
   margin-left: 0.9375rem;
+}
+
+html body .main-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.875rem;
+}
+
+html body .secondary-text {
+  line-height: 1.625rem;
+}
+
+html body .third-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+html body .secondary-header {
+  font-family: "Lora", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.1875rem;
+  color: var(--primary-color);
+}
+
+html body .section {
+  margin: 7rem 0;
 }
 
 html body .header {
@@ -108,10 +138,8 @@ html body .main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-}
-
-html body .main section {
-  margin: 7rem 0;
+  /* SECTION REASONS */
+  /* SECTION PARTNERS */
 }
 
 html body .main .reasons__container {
@@ -166,7 +194,6 @@ html body .main .reasons__icons___block____info_____header {
 }
 
 html body .main .reasons__icons___block____info_____text {
-  line-height: 1.625rem;
   color: var(--text-gray-2);
 }
 
@@ -179,18 +206,8 @@ html body .main .reasons__text {
 }
 
 html body .main .reasons__text___header {
-  font-family: "Lora", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 3.1875rem;
+  color: var(--main-white);
   margin: 0.5rem 0 1.5rem;
-}
-
-html body .main .reasons__text___main {
-  font-family: "Lato", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.875rem;
 }
 
 html body .main .reasons__text .guide__header {
@@ -199,6 +216,51 @@ html body .main .reasons__text .guide__header {
 
 html body .main .reasons__text .guide__line {
   background-color: var(--main-white);
+}
+
+html body .main .partners__container {
+  height: 14.10187rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3.5rem;
+}
+
+html body .main .partners__head {
+  text-align: center;
+  max-width: 39.5625rem;
+}
+
+html body .main .partners__head___header {
+  margin-bottom: 1.5rem;
+}
+
+html body .main .partners__head___text {
+  color: var(--text-gray-2);
+}
+
+html body .main .partners__brands {
+  height: 4.16437rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.75rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 html body .footer {

@@ -12,14 +12,13 @@ html {
   body {
     height: 100%;
 
+    /*=====SUPPORT STYLES==================================================================*/
+
     .guide {
       display: flex;
       align-items: center;
 
       &__header {
-        font-size: size(20);
-        font-weight: 500;
-        line-height: size(30);
         color: var(--text-black);
       }
 
@@ -31,6 +30,37 @@ html {
       }
     }
 
+    .main-text {
+      font-size: size(20);
+      font-weight: 500;
+      line-height: size(30);
+    }
+
+    .secondary-text {
+      line-height: size(26);
+    }
+
+    .third-text {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+
+    .secondary-header {
+      font-family: "Lora", sans-serif;
+      font-size: size(40);
+      font-weight: 700;
+      line-height: size(51);
+      color: var(--primary-color);
+    }
+
+    .section {
+      margin: size(112) 0;
+    }
+
+    /*=====MAIN STYLES====================================================================*/
+
+    /* HEADER */
     .header {
       height: size(43);
       margin-top: size(61);
@@ -97,13 +127,11 @@ html {
       }
     }
 
+    /* MAIN */
     .main {
       flex: 1 1 auto;
 
-      section {
-        margin: size(112) 0;
-      }
-
+      /* SECTION REASONS */
       .reasons {
         &__container {
           height: size(421);
@@ -142,7 +170,6 @@ html {
               }
 
               &_____text {
-                line-height: size(26);
                 color: var(--text-gray-2);
               }
             }
@@ -157,18 +184,11 @@ html {
           padding: size(54);
 
           &___header {
-            font-family: "Lora", sans-serif;
-            font-size: size(40);
-            font-weight: 700;
-            line-height: size(51);
+            color: var(--main-white);
             margin: size(8) 0 size(24);
           }
 
           &___main {
-            font-family: "Lato", sans-serif;
-            font-size: size(20);
-            font-weight: 500;
-            line-height: size(30);
           }
 
           .guide {
@@ -182,8 +202,44 @@ html {
           }
         }
       }
+
+      /* SECTION PARTNERS */
+      .partners {
+        &__container {
+          height: size(225.63);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: size(56);
+        }
+
+        &__head {
+          text-align: center;
+          max-width: size(633);
+
+          &___header {
+            margin-bottom: size(24);
+          }
+          &___text {
+            color: var(--text-gray-2);
+          }
+        }
+
+        &__brands {
+          height: size(66.63);
+          display: flex;
+          gap: size(60);
+          align-items: center;
+          justify-content: center;
+
+          &___pic {
+          }
+        }
+      }
     }
 
+    /* FOOTER */
     .footer {
       height: size(408);
       background-color: var(--primary-color-up);
