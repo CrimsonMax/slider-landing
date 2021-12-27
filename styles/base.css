@@ -52,11 +52,6 @@ body {
   overflow: hidden;
 }
 
-.content {
-  width: 1110px;
-  margin: 0 auto;
-}
-
 .hover {
   transition: all 0.3s ease;
 }

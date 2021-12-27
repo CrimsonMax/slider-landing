@@ -8,9 +8,15 @@
 
 html {
   height: 100%;
+  font-size: 1.2vw;
 
   body {
     height: 100%;
+
+    .content {
+      width: size(1110);
+      margin: 0 auto;
+    }
 
     /*=====SUPPORT STYLES==================================================================*/
 
@@ -41,9 +47,9 @@ html {
     }
 
     .third-text {
-      font-size: 18px;
+      font-size: size(18);
       font-weight: 500;
-      line-height: 28px;
+      line-height: size(28);
     }
 
     .secondary-header {
@@ -71,11 +77,20 @@ html {
 
     .more-btn {
       color: var(--secondary-color);
-      position: relative;
       height: size(32);
 
+
+      :hover {
+        text-shadow: 0 0 size(10);
+
+        .icon-chevron {
+          left: 1%;
+          text-shadow: none;
+        }
+      }
+
       .icon-chevron {
-        font-size: 32px;
+        font-size: size(32);
         position: relative;
         top: 25%;
       }
@@ -125,13 +140,14 @@ html {
       }
 
       &__authorization {
-        width: size(194);
+        width: size(195);
         display: flex;
 
         button {
           font-weight: 700;
           line-height: size(19);
           height: size(43);
+          font-size: size(14);
           padding: size(12) size(24);
         }
 
@@ -257,7 +273,97 @@ html {
           justify-content: center;
 
           &___pic {
+            max-height: size(42);
           }
+        }
+      }
+
+      /* SECTION FAQS */
+      .faqs {
+        height: size(423);
+        margin-bottom: size(36);
+
+        &__container {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        &__header {
+          height: size(102);
+          width: size(578);
+          text-align: center;
+        }
+
+        &__boxes {
+          height: size(200);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: size(30);
+          margin: size(54) 0 size(35);
+
+          .center-box {
+            background-color: var(--secondary-color);
+            color: var(--main-white);
+
+            button {
+              background-color: var(--main-white);
+              color: var(--secondary-color);
+              box-shadow: 0 size(6) size(24) 0 #00000026;
+            }
+          }
+
+          &___block {
+            height: size(171);
+            width: size(350);
+            padding: size(42) size(40) size(63);
+            text-align: center;
+            position: relative;
+            background-color: var(--main-white);
+            box-shadow: 0 size(6) size(24) 0 #00000026;
+            color: var(--text-black);
+
+            &____text {
+              font-family: "Lora", sans-serif;
+              font-size: size(26);
+              line-height: size(33);
+            }
+
+            button:hover {
+              opacity: 1;
+
+              span {
+                width: size(18);
+              }
+            }
+
+            &____chevron {
+              height: size(48);
+              width: size(64);
+              font-size: size(32);
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, 125%);
+              background-color: var(--secondary-color);
+              color: var(--main-white);
+              transition: all 0.3s ease;
+
+              span {
+                height: size(32);
+                width: size(24);
+                display: inline-block;
+                transform: rotate(90deg);
+                transition: all 0.2s ease;
+              }
+            }
+          }
+        }
+
+        &___href {
         }
       }
 
@@ -374,7 +480,7 @@ html {
               padding: size(14) size(16) size(16);
 
               &_____header {
-                font-family: 'Lora', sans-serif;
+                font-family: "Lora", sans-serif;
                 font-size: size(22);
                 line-height: size(28);
                 color: var(--text-black);
