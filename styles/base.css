@@ -5,6 +5,7 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 a {
@@ -52,9 +53,9 @@ body {
   overflow: hidden;
 }
 
-.hover {
+/* .hover {
   transition: all 0.3s ease;
-}
+} */
 
 .hover:hover {
   color: var(--secondary-color);

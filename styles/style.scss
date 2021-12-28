@@ -52,6 +52,14 @@ html {
       line-height: size(28);
     }
 
+    .fourth-text {
+      font-family: "Lato", sans-serif;
+      font-size: size(20);
+      font-weight: 700;
+      line-height: size(24);
+      color: var(--text-black);
+    }
+
     .secondary-header {
       font-family: "Lora", sans-serif;
       font-size: size(40);
@@ -78,7 +86,6 @@ html {
     .more-btn {
       color: var(--secondary-color);
       height: size(32);
-
 
       :hover {
         text-shadow: 0 0 size(10);
@@ -242,6 +249,85 @@ html {
         }
       }
 
+      /* SECTION FACILITIES */
+      .facilities {
+        height: size(649);
+
+        &__container {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: size(51);
+        }
+
+        &__heading {
+          height: size(145);
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          &___main {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: size(8);
+
+            &____guide {
+            }
+
+            &____header {
+              height: size(102);
+              width: size(570);
+            }
+          }
+
+          &___more {
+            align-self: end;
+
+            &____href {
+            }
+          }
+        }
+
+        &__content {
+          height: size(453);
+          display: flex;
+          gap: size(88);
+
+          &___list {
+            height: size(360);
+            width: size(293);
+
+            .highlight-facility {
+              background-color: var(--secondary-color);
+              color: var(--main-white);
+              box-shadow: 0 size(6) size(24) 0 var(--secondary-color);
+            }
+
+            &____block {
+              cursor: pointer;
+              height: size(72);
+              width: 100%;
+              padding: size(24);
+
+              &:hover {
+                box-shadow: 0 size(6) size(24) 0 #00000026;
+              }
+            }
+          }
+
+          &___image {
+            width: size(729);
+
+            &____pic {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+
       /* SECTION PARTNERS */
       .partners {
         &__container {
@@ -350,14 +436,14 @@ html {
               transform: translate(-50%, 125%);
               background-color: var(--secondary-color);
               color: var(--main-white);
-              transition: all 0.3s ease;
+              // transition: all 0.3s ease;
 
               span {
                 height: size(32);
                 width: size(24);
                 display: inline-block;
                 transform: rotate(90deg);
-                transition: all 0.2s ease;
+                // transition: all 0.2s ease;
               }
             }
           }
@@ -402,7 +488,7 @@ html {
 
           &___prime:hover,
           &___minor:hover {
-            transition: 0.3s;
+            // transition: 0.3s;
             box-shadow: 0 size(6) size(24) 0 var(--secondary-color);
             cursor: default;
           }
