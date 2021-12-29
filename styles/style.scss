@@ -323,6 +323,17 @@ html {
               height: 100%;
               width: 100%;
               object-fit: cover;
+              animation: fade .3s linear;
+              animation-delay: 1s;
+            }
+
+            @keyframes fade {
+              0% {
+                opacity: 0;
+              }
+              100% {
+                opacity: 1;
+              }
             }
           }
         }
