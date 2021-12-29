@@ -359,28 +359,6 @@ html body .main .facilities__content___image____pic {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-animation: fade .3s linear;
-          animation: fade .3s linear;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-@-webkit-keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 html body .main .partners__container {
