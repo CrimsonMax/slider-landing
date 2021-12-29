@@ -2,7 +2,7 @@ const facilitiesItem = document.querySelector('.facilities__content___list')
 const facilitiesImage = document.querySelector('.facilities__content___image____pic')
 
 function changeAnimation(elem) {
-  facilitiesImage.style.opacity = '0'
+  facilitiesImage.style.opacity = '0.5'
   setTimeout(() => {
     facilitiesImage.style.opacity = '1'
     facilitiesImage.src = `img/images/facilities-${elem}.png`
