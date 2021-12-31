@@ -66,8 +66,8 @@ html body .fourth-text {
 
 html body .secondary-header {
   font-family: "Lora", sans-serif;
-  font-size: 2.5rem;
   font-weight: 700;
+  font-size: 2.5rem;
   line-height: 3.1875rem;
   color: var(--primary-color);
 }
@@ -110,7 +110,7 @@ html body .more-btn .icon-chevron {
 
 html body .header {
   height: 2.6875rem;
-  margin-top: 3.8125rem;
+  margin: 3.8125rem 0 3.5rem;
 }
 
 html body .header__container {
@@ -185,6 +185,7 @@ html body .main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  /* SECTION INTRO */
   /* SECTION REASONS */
   /* SECTION FACILITIES */
   /* SECTION PARTNERS */
@@ -192,8 +193,128 @@ html body .main {
   /* SECTION NEWS */
 }
 
-html body .main .reasons__container {
+html body .main .intro {
+  height: 52.375rem;
+  margin-top: 0;
+}
+
+html body .main .intro__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2.0625rem;
+}
+
+html body .main .intro__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+html body .main .intro__header___main {
+  height: 12.5625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.8125rem;
+}
+
+html body .main .intro__header___main____title {
+  width: 41.6875rem;
+  font-size: 3.25rem;
+  line-height: 4.1875rem;
+}
+
+html body .main .intro__header___main____title span {
+  color: var(--secondary-color);
+}
+
+html body .main .intro__header___main____subtitle {
+  height: 7.5rem;
+  width: 23.875rem;
+  color: var(--text-gray-1);
+}
+
+html body .main .intro__images {
+  height: 35.375rem;
+  width: 100%;
+  position: relative;
+}
+
+html body .main .intro__images___container {
+  height: 100%;
+  position: relative;
+}
+
+html body .main .intro__images___container____pic {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  opacity: 0;
+}
+
+html body .main .intro__images___container____pic:nth-child(1) {
+  opacity: 1;
+}
+
+html body .main .intro__images___indicator {
+  height: 0.30125rem;
+  width: 6.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+html body .main .intro__images___indicator____dot {
+  height: 0.25rem;
+  width: 1rem;
+  background-color: var(--main-white);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+html body .main .intro__images___indicator .indicator-active {
+  width: 2.5rem;
+  background-color: var(--secondary-color);
+  opacity: 1;
+}
+
+html body .main .reasons {
   height: 26.3125rem;
+}
+
+html body .main .reasons__container {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,6 +473,7 @@ html body .main .facilities__content___list____block:hover {
 
 html body .main .facilities__content___image {
   width: 45.5625rem;
+  position: relative;
 }
 
 html body .main .facilities__content___image____pic {
@@ -359,10 +481,20 @@ html body .main .facilities__content___image____pic {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
+  opacity: 0;
+}
+
+html body .main .facilities__content___image____pic:nth-child(3) {
+  opacity: 1;
+}
+
+html body .main .partners {
+  height: 14.10187rem;
 }
 
 html body .main .partners__container {
-  height: 14.10187rem;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

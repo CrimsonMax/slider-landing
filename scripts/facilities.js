@@ -1,22 +1,18 @@
 const facilitiesItem = document.querySelector('.facilities__content___list')
-const facilitiesImage = document.querySelector('.facilities__content___image____pic')
+const facilitiesImages = document.querySelectorAll('.facilities__content___image____pic')
 
-function changeAnimation(elem) {
-  facilitiesImage.style.opacity = '0.5'
-  setTimeout(() => {
-    facilitiesImage.style.opacity = '1'
-    facilitiesImage.src = `img/images/facilities-${elem}.png`
-  }, 150)
-}
 
 function sortImage(event) {
   let block = event.target
   let index = block.dataset.image
 
   if (block.classList.contains('highlight-facility')) return
+
   document.querySelector('.highlight-facility').classList.remove('highlight-facility')
   block.classList.add('highlight-facility')
-  changeAnimation(index)
+  facilitiesImages.forEach(elem => {
+    elem.dataset.id === index ? elem.style.opacity = '1' : elem.style.opacity = '0'
+  })
 }
 
 // function autoChange() {
@@ -45,6 +41,6 @@ function sortImage(event) {
 //   setInterval(autoChange, 5000);
 // }
 
-export function changeImage() {
+export function changeFacility() {
   facilitiesItem.addEventListener('click', sortImage)
 }

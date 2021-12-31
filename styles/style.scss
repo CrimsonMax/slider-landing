@@ -62,8 +62,8 @@ html {
 
     .secondary-header {
       font-family: "Lora", sans-serif;
-      font-size: size(40);
       font-weight: 700;
+      font-size: size(40);
       line-height: size(51);
       color: var(--primary-color);
     }
@@ -108,7 +108,7 @@ html {
     /* HEADER */
     .header {
       height: size(43);
-      margin-top: size(61);
+      margin: size(61) 0 size(56);
 
       &__container {
         height: 100%;
@@ -177,10 +177,108 @@ html {
     .main {
       flex: 1 1 auto;
 
+      /* SECTION INTRO */
+      .intro {
+        height: size(838);
+        margin-top: 0;
+
+        &__container {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: size(33);
+        }
+
+        &__header {
+          display: flex;
+          flex-direction: column;
+          gap: size(8);
+
+          &___guide {
+          }
+
+          &___main {
+            height: size(201);
+            display: flex;
+            gap: size(61);
+
+            &____title {
+              width: size(667);
+              font-size: size(52);
+              line-height: size(67);
+
+              span {
+                color: var(--secondary-color);
+              }
+            }
+
+            &____subtitle {
+              height: size(120);
+              width: size(382);
+              color: var(--text-gray-1);
+            }
+          }
+        }
+
+        &__images {
+          height: size(566);
+          width: 100%;
+          position: relative;
+
+          &___container {
+            height: 100%;
+            position: relative;
+
+            &____pic {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              position: absolute;
+              opacity: 0;
+
+              &:nth-child(1) {
+                opacity: 1;
+              }
+            }
+          }
+
+          &___indicator {
+            height: size(4.82);
+            width: size(100);
+            display: flex;
+            gap: size(4);
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &____dot {
+              height: size(4);
+              width: size(16);
+              background-color: var(--main-white);
+              opacity: 0.5;
+              cursor: pointer;
+            }
+
+            .indicator-active {
+              width: size(40);
+              background-color: var(--secondary-color);
+              opacity: 1;
+            }
+          }
+        }
+      }
+
       /* SECTION REASONS */
       .reasons {
+        height: size(421);
+
         &__container {
-          height: size(421);
+          height: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -318,11 +416,18 @@ html {
 
           &___image {
             width: size(729);
+            position: relative;
 
             &____pic {
               height: 100%;
               width: 100%;
               object-fit: cover;
+              position: absolute;
+              opacity: 0;
+
+              &:nth-child(3) {
+                opacity: 1;
+              }
             }
           }
         }
@@ -330,8 +435,10 @@ html {
 
       /* SECTION PARTNERS */
       .partners {
+        height: size(225.63);
+
         &__container {
-          height: size(225.63);
+          height: 100%;
           display: flex;
           flex-direction: column;
           justify-content: center;
