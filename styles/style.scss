@@ -2,6 +2,7 @@
 @import url(colors.css);
 @import url(icon-style.css);
 
+// Пересчёт 'px' в 'rem'
 @function size($pixel) {
   @return ($pixel / 16) + rem;
 }
@@ -9,6 +10,18 @@
 html {
   height: 100%;
   font-size: 1.2vw;
+
+  @media screen and (min-width: size(769)) and (max-width: size(1024)) {
+    font-size: 1.4vw;
+  }
+
+  // @media screen and (min-width: size(376)) and (max-width: size(768)) {
+  //   font-size: 1.6vw;
+  // }
+
+  // @media screen and (max-width: size(376)) {
+  //   font-size: 3.2vw;
+  // }
 
   body {
     height: 100%;
@@ -237,6 +250,7 @@ html {
               object-fit: cover;
               position: absolute;
               opacity: 0;
+              transition: all 0.5s ease;
 
               &:nth-child(1) {
                 opacity: 1;
@@ -464,6 +478,10 @@ html {
           gap: size(60);
           align-items: center;
           justify-content: center;
+
+          @media screen and (max-width: size(1024)) {
+            gap: size(40);
+          }
 
           &___pic {
             max-height: size(42);
@@ -734,8 +752,10 @@ html {
               display: flex;
               justify-content: center;
               align-items: center;
+              transition: none;
 
               span {
+                transition: none;
                 font-size: size(20);
               }
             }

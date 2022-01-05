@@ -6,6 +6,12 @@ html {
   font-size: 1.2vw;
 }
 
+@media screen and (min-width: 48.0625rem) and (max-width: 64rem) {
+  html {
+    font-size: 1.4vw;
+  }
+}
+
 html body {
   height: 100%;
   /*=====SUPPORT STYLES==================================================================*/
@@ -269,6 +275,8 @@ html body .main .intro__images___container____pic {
      object-fit: cover;
   position: absolute;
   opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 html body .main .intro__images___container____pic:nth-child(1) {
@@ -536,6 +544,12 @@ html body .main .partners__brands {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 64rem) {
+  html body .main .partners__brands {
+    gap: 2.5rem;
+  }
 }
 
 html body .main .partners__brands___pic {
@@ -844,9 +858,13 @@ html body .footer__about___content____media_____icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: none;
+  transition: none;
 }
 
 html body .footer__about___content____media_____icon span {
+  -webkit-transition: none;
+  transition: none;
   font-size: 1.25rem;
 }
 
