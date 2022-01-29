@@ -24,7 +24,7 @@ html {
   }
 
   @media screen and (max-width: size(480)) {
-    font-size: 2.4vw; // 12px
+    font-size: 3vw; // 12px
   }
 
   body {
@@ -36,6 +36,10 @@ html {
 
       @media screen and (min-width: size(481)) and (max-width: size(768)) {
         width: size(850);
+      }
+
+      @media screen and (max-width: size(480)) {
+        width: size(450);
       }
     }
 
@@ -87,12 +91,16 @@ html {
       font-size: size(40);
       line-height: size(51);
       color: var(--primary-color);
+
+      @media screen and (max-width: size(480)) {
+        text-align: center;
+      }
     }
 
     .section {
       margin: size(112) 0;
 
-      @media screen and (min-width: size(481)) and (max-width: size(1024)) {
+      @media screen and (max-width: size(1024)) {
         margin: size(84) 0;
       }
     }
@@ -139,6 +147,11 @@ html {
         margin: size(31) 0 size(28);
       }
 
+      @media screen and (max-width: size(480)) {
+        height: size(60);
+        margin: size(30) 0 size(25);
+      }
+
       &__container {
         height: 100%;
         display: flex;
@@ -163,6 +176,10 @@ html {
         @media screen and (min-width: size(481)) and (max-width: size(768)) {
           margin-right: size(12);
           margin-left: size(30);
+        }
+
+        @media screen and (max-width: size(480)) {
+          display: none;
         }
 
         &___list {
@@ -220,6 +237,10 @@ html {
         height: size(838);
         margin-top: 0;
 
+        @media screen and (max-width: size(480)) {
+          height: 100%;
+        }
+
         &__container {
           height: 100%;
           display: flex;
@@ -248,10 +269,21 @@ html {
               gap: size(12);
             }
 
+            @media screen and (max-width: size(480)) {
+              height: 100%;
+              flex-direction: column;
+              gap: size(12);
+            }
+
             &____title {
               width: size(667);
               font-size: size(52);
               line-height: size(67);
+
+              @media screen and (max-width: size(480)) {
+                width: 100%;
+                margin: size(12) 0;
+              }
 
               span {
                 color: var(--secondary-color);
@@ -263,6 +295,12 @@ html {
               width: size(382);
               color: var(--text-gray-1);
               padding-top: size(10);
+
+              @media screen and (max-width: size(480)) {
+                padding: 0;
+                text-align: center;
+                width: 100%;
+              }
             }
           }
         }
@@ -302,18 +340,32 @@ html {
             left: 50%;
             transform: translate(-50%, -50%);
 
+            @media screen and (max-width: size(480)) {
+              width: 100%;
+            }
+
             &____dot {
               height: size(4);
               width: size(16);
               background-color: var(--main-white);
               opacity: 0.5;
               cursor: pointer;
+              border-radius: size(4);
+
+              @media screen and (max-width: size(480)) {
+                height: size(30);
+                width: size(96);
+              }
             }
 
             .indicator-active {
               width: size(40);
               background-color: var(--secondary-color);
               opacity: 1;
+
+              @media screen and (max-width: size(480)) {
+                width: size(60);
+              }
             }
           }
         }
@@ -323,7 +375,7 @@ html {
       .reasons {
         height: size(421);
 
-        @media screen and (min-width: size(481)) and (max-width: size(768)) {
+        @media screen and (max-width: size(768)) {
           height: 100%;
         }
 
@@ -335,7 +387,12 @@ html {
 
           @media screen and (min-width: size(481)) and (max-width: size(768)) {
             flex-wrap: wrap;
-            gap: 30px;
+            gap: size(30);
+          }
+
+          @media screen and (max-width: size(480)) {
+            flex-direction: column;
+            gap: size(40);
           }
         }
 
@@ -355,6 +412,14 @@ html {
             height: size(253);
             width: size(599);
             gap: size(32);
+          }
+
+          @media screen and (max-width: size(480)) {
+            height: size(305);
+            order: 1;
+            margin: 0;
+            gap: size(40);
+            width: 100%;
           }
 
           &___block {
@@ -395,12 +460,23 @@ html {
             width: 100%;
           }
 
+          @media screen and (max-width: size(480)) {
+            padding: size(20) size(50);
+          }
+
           &___header {
             color: var(--main-white);
             margin: size(8) 0 size(24);
+
+            @media screen and (max-width: size(480)) {
+              margin: size(24) 0;
+            }
           }
 
           &___main {
+            @media screen and (max-width: size(480)) {
+              text-align: center;
+            }
           }
 
           .guide {
@@ -419,11 +495,19 @@ html {
       .facilities {
         height: size(649);
 
+        @media screen and (max-width: size(480)) {
+          height: 100%;
+        }
+
         &__container {
           height: 100%;
           display: flex;
           flex-direction: column;
           gap: size(51);
+
+          @media screen and (max-width: size(480)) {
+            gap: size(38);
+          }
         }
 
         &__heading {
@@ -432,11 +516,21 @@ html {
           display: flex;
           justify-content: space-between;
 
+          @media screen and (max-width: size(480)) {
+            height: 100%;
+            flex-direction: column;
+            gap: size(12);
+          }
+
           &___main {
             height: 100%;
             display: flex;
             flex-direction: column;
             gap: size(8);
+
+            @media screen and (max-width: size(480)) {
+              gap: size(16);
+            }
 
             &____guide {
             }
@@ -444,11 +538,20 @@ html {
             &____header {
               height: size(102);
               width: size(570);
+
+              @media screen and (max-width: size(480)) {
+                height: 100%;
+                width: 100%;
+              }
             }
           }
 
           &___more {
             align-self: end;
+
+            @media screen and (max-width: size(480)) {
+              align-self: center;
+            }
 
             &____href {
             }
@@ -464,12 +567,21 @@ html {
             gap: size(22);
           }
 
+          @media screen and (max-width: size(480)) {
+            height: 100%;
+            gap: size(10);
+          }
+
           &___list {
             height: size(360);
             width: size(293);
 
             @media screen and (min-width: size(481)) and (max-width: size(768)) {
               width: size(393);
+            }
+
+            @media screen and (max-width: size(480)) {
+              height: 100%;
             }
 
             .highlight-facility {
@@ -483,6 +595,10 @@ html {
               height: size(72);
               width: 100%;
               padding: size(24);
+
+              @media screen and (max-width: size(480)) {
+                height: 100%;
+              }
 
               &:hover {
                 box-shadow: 0 size(6) size(24) 0 #00000026;
@@ -513,7 +629,7 @@ html {
       .partners {
         height: size(225.63);
 
-        @media screen and (min-width: size(481)) and (max-width: size(768)) {
+        @media screen and (max-width: size(768)) {
           height: 100%;
         }
 
@@ -527,6 +643,10 @@ html {
 
           @media screen and (min-width: size(481)) and (max-width: size(768)) {
             gap: size(40);
+          }
+
+          @media screen and (max-width: size(480)) {
+            gap: size(42);
           }
         }
 
@@ -560,6 +680,13 @@ html {
             gap: size(40);
           }
 
+          @media screen and (max-width: size(480)) {
+            gap: size(30);
+            width: 100%;
+            flex-wrap: wrap;
+            height: 100%;
+          }
+
           &___pic {
             max-height: size(42);
           }
@@ -570,6 +697,10 @@ html {
       .faqs {
         height: size(423);
         margin-bottom: size(36);
+
+        @media screen and (max-width: size(480)) {
+          height: 100%;
+        }
 
         &__container {
           height: 100%;
@@ -583,6 +714,11 @@ html {
           height: size(102);
           width: size(578);
           text-align: center;
+
+          @media screen and (max-width: size(480)) {
+            height: 100%;
+            width: 100%;
+          }
         }
 
         &__boxes {
@@ -596,6 +732,13 @@ html {
           @media screen and (min-width: size(481)) and (max-width: size(768)) {
             width: 100%;
             margin: size(27) 0 size(35);
+          }
+
+          @media screen and (max-width: size(480)) {
+            width: 100%;
+            flex-direction: column;
+            height: 100%;
+            gap: size(50);
           }
 
           .center-box {
@@ -675,6 +818,11 @@ html {
           padding-bottom: size(48);
         }
 
+        @media screen and (max-width: size(480)) {
+          height: 100%;
+          padding-bottom: size(24);
+        }
+
         &__container {
           display: flex;
           flex-direction: column;
@@ -693,6 +841,14 @@ html {
           }
 
           &___href {
+            @media screen and (max-width: size(480)) {
+              align-self: center;
+            }
+          }
+
+          @media screen and (max-width: size(480)) {
+            flex-direction: column;
+            gap: size(14);
           }
         }
 
@@ -708,9 +864,14 @@ html {
             width: 100%;
           }
 
+          @media screen and (max-width: size(480)) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            width: 100%;
+          }
+
           &___prime:hover,
           &___minor:hover {
-            // transition: 0.3s;
             box-shadow: 0 size(6) size(24) 0 var(--secondary-color);
             cursor: default;
           }
@@ -726,17 +887,34 @@ html {
             grid-column-end: 3;
             display: flex;
 
+            @media screen and (max-width: size(480)) {
+              grid-column-start: 1;
+              grid-column-end: 2;
+              grid-row-start: 1;
+              grid-row-end: 3;
+              flex-direction: column;
+              height: 100%;
+            }
+
             &____image {
               &_____img {
                 width: size(350);
                 height: 100%;
                 object-fit: cover;
+
+                @media screen and (max-width: size(480)) {
+                  width: 100%;
+                }
               }
             }
 
             &____content {
               width: size(380);
               padding: size(32) size(33) size(33) size(32);
+
+              @media screen and (max-width: size(480)) {
+                width: 100%;
+              }
 
               &_____header {
                 font-family: "Lora", sans-serif;
@@ -776,7 +954,7 @@ html {
             height: size(320);
             width: size(350);
 
-            @media screen and (min-width: size(481)) and (max-width: size(768)) {
+            @media screen and (max-width: size(768)) {
               width: 100%;
             }
 
@@ -813,7 +991,7 @@ html {
       height: size(408);
       background-color: var(--primary-color-up);
 
-      @media screen and (min-width: size(481)) and (max-width: size(768)) {
+      @media screen and (max-width: size(768)) {
         height: 100%;
       }
 
@@ -839,6 +1017,15 @@ html {
           gap: size(35);
           margin-bottom: size(51);
         }
+
+        @media screen and (max-width: size(480)) {
+          height: 100%;
+          flex-direction: column;
+          gap: size(42);
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 0;
+        }
       }
 
       &__about {
@@ -855,12 +1042,24 @@ html {
           align-items: center;
         }
 
+        @media screen and (max-width: size(480)) {
+          height: 100%;
+          order: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1.5rem;
+          width: 100%;
+        }
+
         &___header {
           margin-bottom: size(16);
           font-size: size(52);
           line-height: size(67);
 
-          @media screen and (min-width: size(481)) and (max-width: size(768)) {
+          @media screen and (max-width: size(768)) {
             margin-bottom: 0;
           }
         }
@@ -872,13 +1071,21 @@ html {
             align-items: center;
           }
 
+          @media screen and (max-width: size(480)) {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: size(20);
+          }
+
           &____text {
             margin-bottom: size(24);
             line-height: size(26);
             color: var(--text-gray-4);
             opacity: 85%;
 
-            @media screen and (min-width: size(481)) and (max-width: size(768)) {
+            @media screen and (max-width: size(768)) {
               margin-bottom: 0;
             }
           }
@@ -888,6 +1095,10 @@ html {
             align-items: center;
             gap: size(16);
 
+            @media screen and (max-width: size(480)) {
+              gap: size(32);
+            }
+
             &_____icon {
               height: size(24);
               width: size(24);
@@ -896,12 +1107,21 @@ html {
               align-items: center;
               transition: none;
 
+              @media screen and (max-width: size(480)) {
+                height: 100%;
+                width: 100%;
+              }
+
               span {
                 transition: none;
                 font-size: size(20);
 
                 @media screen and (min-width: size(481)) and (max-width: size(1024)) {
                   font-size: size(30);
+                }
+
+                @media screen and (max-width: size(480)) {
+                  font-size: size(50);
                 }
               }
             }
@@ -916,8 +1136,14 @@ html {
         justify-content: space-between;
         gap: size(68);
 
-        @media screen and (min-width: size(481)) and (max-width: size(768)) {
+        @media screen and (max-width: size(768)) {
           width: 100%;
+        }
+
+        @media screen and (max-width: size(480)) {
+          height: 100%;
+          flex-wrap: wrap;
+          gap: size(34);
         }
       }
 

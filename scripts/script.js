@@ -7,3 +7,5 @@ autoIntroImage()
 changeIntro()
 changeFacility()
 // autoFacilitiesImage()
+
+console.log(getComputedStyle(document.querySelector('html')).getPropertyValue('font-size'))
