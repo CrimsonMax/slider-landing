@@ -353,7 +353,7 @@ html {
               border-radius: size(4);
 
               @media screen and (max-width: size(480)) {
-                height: size(30);
+                height: size(20);
                 width: size(96);
               }
             }
@@ -766,6 +766,26 @@ html {
               padding: size(21) size(40) size(63);
             }
 
+            .faq-modal {
+              opacity: 0;
+              width: 100%;
+              background-color: var(--primary-color);
+              padding: size(32);
+              text-align: center;
+              position: relative;
+              font-family: "Lora", sans-serif;
+              color: var(--main-white);
+              box-shadow: 0 size(6) size(24) 0 #00000026;
+              top: 0;
+
+              &.active {
+                opacity: 1;
+                position: relative;
+                top: size(96);
+                z-index: 999;
+              }
+            }
+
             &____text {
               font-family: "Lora", sans-serif;
               font-size: size(26);
@@ -776,7 +796,7 @@ html {
               opacity: 1;
 
               span {
-                width: size(18);
+                width: size(36);
               }
             }
 
@@ -790,14 +810,17 @@ html {
               transform: translate(-50%, 125%);
               background-color: var(--secondary-color);
               color: var(--main-white);
-              // transition: all 0.3s ease;
+              z-index: 1;
 
               span {
                 height: size(32);
                 width: size(24);
                 display: inline-block;
                 transform: rotate(90deg);
-                // transition: all 0.2s ease;
+
+                &.active {
+                  transform: rotate3d(1, -1, 0, 180deg);
+                }
               }
             }
           }
